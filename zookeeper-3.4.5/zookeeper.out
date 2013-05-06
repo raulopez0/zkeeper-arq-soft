@@ -1,0 +1,10 @@
+2013-05-05 17:41:59,373 [myid:] - INFO  [main:QuorumPeerConfig@101] - Reading configuration from: /home/raul/Desktop/FIUBA/arq-soft/zookeeper-3.4.5/bin/../conf/zoo.cfg
+2013-05-05 17:41:59,376 [myid:] - ERROR [main:QuorumPeerMain@85] - Invalid config, exiting abnormally
+org.apache.zookeeper.server.quorum.QuorumPeerConfig$ConfigException: Error processing /home/raul/Desktop/FIUBA/arq-soft/zookeeper-3.4.5/bin/../conf/zoo.cfg
+	at org.apache.zookeeper.server.quorum.QuorumPeerConfig.parse(QuorumPeerConfig.java:121)
+	at org.apache.zookeeper.server.quorum.QuorumPeerMain.initializeAndRun(QuorumPeerMain.java:101)
+	at org.apache.zookeeper.server.quorum.QuorumPeerMain.main(QuorumPeerMain.java:78)
+Caused by: java.lang.IllegalArgumentException: /home/raul/Desktop/FIUBA/arq-soft/zookeeper-3.4.5/bin/../conf/zoo.cfg file is missing
+	at org.apache.zookeeper.server.quorum.QuorumPeerConfig.parse(QuorumPeerConfig.java:105)
+	... 2 more
+Invalid config, exiting abnormally

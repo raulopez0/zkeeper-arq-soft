@@ -1,0 +1,33 @@
+2013-05-05 17:44:01,453 [myid:] - INFO  [main:QuorumPeerConfig@101] - Reading configuration from: /home/raul/Desktop/FIUBA/arq-soft/zookeeper-3.4.5/bin/../conf/zoo.cfg
+2013-05-05 17:44:01,457 [myid:] - INFO  [main:DatadirCleanupManager@78] - autopurge.snapRetainCount set to 3
+2013-05-05 17:44:01,458 [myid:] - INFO  [main:DatadirCleanupManager@79] - autopurge.purgeInterval set to 0
+2013-05-05 17:44:01,458 [myid:] - INFO  [main:DatadirCleanupManager@101] - Purge task is not scheduled.
+2013-05-05 17:44:01,459 [myid:] - WARN  [main:QuorumPeerMain@113] - Either no config or no quorum defined in config, running  in standalone mode
+2013-05-05 17:44:01,471 [myid:] - INFO  [main:QuorumPeerConfig@101] - Reading configuration from: /home/raul/Desktop/FIUBA/arq-soft/zookeeper-3.4.5/bin/../conf/zoo.cfg
+2013-05-05 17:44:01,471 [myid:] - INFO  [main:ZooKeeperServerMain@95] - Starting server
+2013-05-05 17:44:01,505 [myid:] - INFO  [main:Environment@100] - Server environment:zookeeper.version=3.4.5-1392090, built on 09/30/2012 17:52 GMT
+2013-05-05 17:44:01,505 [myid:] - INFO  [main:Environment@100] - Server environment:host.name=localhost.localdomain
+2013-05-05 17:44:01,506 [myid:] - INFO  [main:Environment@100] - Server environment:java.version=1.7.0_09-icedtea
+2013-05-05 17:44:01,506 [myid:] - INFO  [main:Environment@100] - Server environment:java.vendor=Oracle Corporation
+2013-05-05 17:44:01,507 [myid:] - INFO  [main:Environment@100] - Server environment:java.home=/usr/lib/jvm/java-1.7.0-openjdk-1.7.0.9.x86_64/jre
+2013-05-05 17:44:01,507 [myid:] - INFO  [main:Environment@100] - Server environment:java.class.path=/home/raul/Desktop/FIUBA/arq-soft/zookeeper-3.4.5/bin/../build/classes:/home/raul/Desktop/FIUBA/arq-soft/zookeeper-3.4.5/bin/../build/lib/*.jar:/home/raul/Desktop/FIUBA/arq-soft/zookeeper-3.4.5/bin/../lib/slf4j-log4j12-1.6.1.jar:/home/raul/Desktop/FIUBA/arq-soft/zookeeper-3.4.5/bin/../lib/slf4j-api-1.6.1.jar:/home/raul/Desktop/FIUBA/arq-soft/zookeeper-3.4.5/bin/../lib/netty-3.2.2.Final.jar:/home/raul/Desktop/FIUBA/arq-soft/zookeeper-3.4.5/bin/../lib/log4j-1.2.15.jar:/home/raul/Desktop/FIUBA/arq-soft/zookeeper-3.4.5/bin/../lib/jline-0.9.94.jar:/home/raul/Desktop/FIUBA/arq-soft/zookeeper-3.4.5/bin/../zookeeper-3.4.5.jar:/home/raul/Desktop/FIUBA/arq-soft/zookeeper-3.4.5/bin/../src/java/lib/*.jar:/home/raul/Desktop/FIUBA/arq-soft/zookeeper-3.4.5/bin/../conf:
+2013-05-05 17:44:01,507 [myid:] - INFO  [main:Environment@100] - Server environment:java.library.path=/usr/java/packages/lib/amd64:/usr/lib64:/lib64:/lib:/usr/lib
+2013-05-05 17:44:01,508 [myid:] - INFO  [main:Environment@100] - Server environment:java.io.tmpdir=/tmp
+2013-05-05 17:44:01,508 [myid:] - INFO  [main:Environment@100] - Server environment:java.compiler=<NA>
+2013-05-05 17:44:01,509 [myid:] - INFO  [main:Environment@100] - Server environment:os.name=Linux
+2013-05-05 17:44:01,509 [myid:] - INFO  [main:Environment@100] - Server environment:os.arch=amd64
+2013-05-05 17:44:01,510 [myid:] - INFO  [main:Environment@100] - Server environment:os.version=3.6.10-4.fc18.x86_64
+2013-05-05 17:44:01,510 [myid:] - INFO  [main:Environment@100] - Server environment:user.name=raul
+2013-05-05 17:44:01,511 [myid:] - INFO  [main:Environment@100] - Server environment:user.home=/home/raul
+2013-05-05 17:44:01,511 [myid:] - INFO  [main:Environment@100] - Server environment:user.dir=/home/raul/Desktop/FIUBA/arq-soft/zookeeper-3.4.5/bin
+2013-05-05 17:44:01,525 [myid:] - INFO  [main:ZooKeeperServer@726] - tickTime set to 2000
+2013-05-05 17:44:01,526 [myid:] - INFO  [main:ZooKeeperServer@735] - minSessionTimeout set to -1
+2013-05-05 17:44:01,526 [myid:] - INFO  [main:ZooKeeperServer@744] - maxSessionTimeout set to -1
+2013-05-05 17:44:01,612 [myid:] - INFO  [main:NIOServerCnxnFactory@94] - binding to port 0.0.0.0/0.0.0.0:2181
+2013-05-05 17:44:01,632 [myid:] - INFO  [main:FileTxnSnapLog@240] - Snapshotting: 0x0 to /tmp/zookeeper/version-2/snapshot.0
+2013-05-05 17:48:39,059 [myid:] - INFO  [NIOServerCxn.Factory:0.0.0.0/0.0.0.0:2181:NIOServerCnxnFactory@197] - Accepted socket connection from /127.0.0.1:32899
+2013-05-05 17:48:39,092 [myid:] - INFO  [NIOServerCxn.Factory:0.0.0.0/0.0.0.0:2181:ZooKeeperServer@839] - Client attempting to establish new session at /127.0.0.1:32899
+2013-05-05 17:48:39,096 [myid:] - INFO  [SyncThread:0:FileTxnLog@199] - Creating new log file: log.1
+2013-05-05 17:48:39,104 [myid:] - INFO  [SyncThread:0:ZooKeeperServer@595] - Established session 0x13e766fd8e50000 with negotiated timeout 30000 for client /127.0.0.1:32899
+2013-05-05 17:51:29,179 [myid:] - INFO  [ProcessThread(sid:0 cport:-1)::PrepRequestProcessor@476] - Processed session termination for sessionid: 0x13e766fd8e50000
+2013-05-05 17:51:29,184 [myid:] - INFO  [NIOServerCxn.Factory:0.0.0.0/0.0.0.0:2181:NIOServerCnxn@1001] - Closed socket connection for client /127.0.0.1:32899 which had sessionid 0x13e766fd8e50000
