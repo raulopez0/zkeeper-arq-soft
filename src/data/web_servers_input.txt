@@ -1,0 +1,10 @@
+#pedidos de inscripcion de alumnos a los web-servers
+#formato:"PADRON:COD:MATERIA"
+88456:6608
+88456:6609
+88456:6670
+85456:7540
+85845:7045
+45845:6670
+79455:7540
+79455:7556
