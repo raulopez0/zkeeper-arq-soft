@@ -31,6 +31,7 @@ public class Worker extends zkexamples.SyncPrimitive implements Runnable {
 	
 	Boolean use_monitor = false;
 	String monitor_address;
+	Database db;
 	
 	public Worker( int worker_id, String queue_address, String queue_name, String monitor_address) throws KeeperException, IOException {
 		super(monitor_address);
@@ -40,6 +41,7 @@ public class Worker extends zkexamples.SyncPrimitive implements Runnable {
 		this.queue = new Queue(queue_address, queue_name);
 		this.use_monitor = true;
 		this.monitor_address = monitor_address;
+		db = new Database(queue_address);
 		logger = Logger.getLogger("Worker_"+(new Integer(this.id)).toString());
 		
 		// creo nodo que me identifica al monitor de workers
@@ -67,6 +69,8 @@ public class Worker extends zkexamples.SyncPrimitive implements Runnable {
 		this.continuar = true;
 		this.queue = new Queue(queue_address, queue_name);
 		this.use_monitor = false;
+		db = new Database(queue_address);
+
 		logger = Logger.getLogger("Worker_"+(new Integer(this.id)).toString());
 	}
 	public Integer get_id() {
@@ -111,8 +115,10 @@ public class Worker extends zkexamples.SyncPrimitive implements Runnable {
         
         if( random.nextBoolean() ) {
         	logger.info("Solicitud "+solicitud.toString()+" aceptada.");
+        	db.store(solicitud, true);
         } else {
         	logger.info("Solicitud "+solicitud.toString()+" rechazada.");
+        	db.store(solicitud, false);
         }
         logger.info("Fin Procesando solicitud "+solicitud.toString());
 
