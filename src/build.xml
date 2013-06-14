@@ -58,8 +58,23 @@
             <classpath refid="zkeeper.classpath"/>
         </java>
     </target>
+    <target name="Queue">
+        <java classname="zkexamples.Queue" failonerror="true" fork="yes">
+            <classpath refid="zkeeper.classpath"/>
+        </java>
+    </target>
+    <target name="Monitor">
+        <java classname="zkexamples.Monitor" failonerror="true" fork="yes">
+            <classpath refid="zkeeper.classpath"/>
+        </java>
+    </target>
     <target name="WebServer">
         <java classname="zkexamples.WebServer" failonerror="true" fork="yes">
+            <classpath refid="zkeeper.classpath"/>
+        </java>
+    </target>
+    <target name="ServiceManager">
+        <java classname="zkexamples.ServiceManager" failonerror="true" fork="yes">
             <classpath refid="zkeeper.classpath"/>
         </java>
     </target>
@@ -74,18 +89,8 @@
             <classpath refid="zkeeper.classpath"/>
         </java>
     </target>
-    <target name="ServiceManager">
-        <java classname="zkexamples.ServiceManager" failonerror="true" fork="yes">
-            <classpath refid="zkeeper.classpath"/>
-        </java>
-    </target>
-    <target name="Monitor">
-        <java classname="zkexamples.Monitor" failonerror="true" fork="yes">
-            <classpath refid="zkeeper.classpath"/>
-        </java>
-    </target>
-    <target name="Queue">
-        <java classname="zkexamples.Queue" failonerror="true" fork="yes">
+    <target name="MonitorClean">
+        <java classname="zkexamples.MonitorClean" failonerror="true" fork="yes">
             <classpath refid="zkeeper.classpath"/>
         </java>
     </target>

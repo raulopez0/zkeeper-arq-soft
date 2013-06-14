@@ -44,7 +44,7 @@ public class Monitor extends zkexamples.SyncPrimitive implements Watcher, Runnab
       // Create ZK node name
       if (zk != null) {
          try {
-            Stat s = zk.exists(root, false);
+            Stat s = zk.exists(root, true);
             if (s == null) {
                zk.create(root, new byte[0], Ids.OPEN_ACL_UNSAFE,
                          CreateMode.PERSISTENT);
@@ -70,7 +70,7 @@ public class Monitor extends zkexamples.SyncPrimitive implements Watcher, Runnab
 
 		   if( running_workers.size()<min_workers ) {
 			   
-			   Worker wk = new Worker("localhost", worker_next_id,"localhost", "/solicitudes");
+			   Worker wk = new Worker(worker_next_id,"localhost", "/solicitudes", "localhost");
 			   Thread th = new Thread( wk);
 			   th.start();
 			   workers.add(wk);
@@ -107,7 +107,9 @@ public class Monitor extends zkexamples.SyncPrimitive implements Watcher, Runnab
    }
    
    public static void main(String args[]) {
+	   
       try {
+    	  //MonitorClean mnclean = new MonitorClean("localhost");
     	  Monitor mn = new Monitor("localhost", 5);
     	  mn.run();
       } catch(Exception ex) {

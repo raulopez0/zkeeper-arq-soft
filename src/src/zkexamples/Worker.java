@@ -23,18 +23,24 @@ import org.apache.zookeeper.data.Stat;
 
 
 public class Worker extends zkexamples.SyncPrimitive implements Runnable {
-	Random random = new Random( (new Date()).getTime() );
+	Random random; 
 	private Boolean continuar;
 	private Queue queue = null;
 	private Integer id;
 	Logger logger = null;
 	
-	public Worker(String monitor_address, int worker_id, String queue_address, String queue_name) throws KeeperException, IOException {
+	Boolean use_monitor = false;
+	String monitor_address;
+	
+	public Worker( int worker_id, String queue_address, String queue_name, String monitor_address) throws KeeperException, IOException {
 		super(monitor_address);
+		random = new Random( (new Date()).getTime() );
 		this.id = worker_id;
 		this.continuar = true;
 		this.queue = new Queue(queue_address, queue_name);
-		//logger = Logger.getLogger("Worker_"+(new Integer(this.id)).toString());
+		this.use_monitor = true;
+		this.monitor_address = monitor_address;
+		logger = Logger.getLogger("Worker_"+(new Integer(this.id)).toString());
 		
 		// creo nodo que me identifica al monitor de workers
 		if (zk != null) {
@@ -52,6 +58,17 @@ public class Worker extends zkexamples.SyncPrimitive implements Runnable {
 	      }
 	}
 	
+
+	public Worker(int worker_id, String queue_address, String queue_name) throws KeeperException, IOException {
+		super(queue_address);
+		random = new Random( (new Date()).getTime() );
+
+		this.id = worker_id;
+		this.continuar = true;
+		this.queue = new Queue(queue_address, queue_name);
+		this.use_monitor = false;
+		logger = Logger.getLogger("Worker_"+(new Integer(this.id)).toString());
+	}
 	public Integer get_id() {
 		return this.id;
 	}
@@ -68,7 +85,6 @@ public class Worker extends zkexamples.SyncPrimitive implements Runnable {
 
 	public void run() {
 		// TODO Auto-generated method stub
-		BasicConfigurator.configure();
 		
 		while( continuar ) {
                 byte[] data;
@@ -105,9 +121,10 @@ public class Worker extends zkexamples.SyncPrimitive implements Runnable {
 	public static void main(String[] args) {
 		
 		try {
-		
-			Thread th1 = new Thread( new Worker("localhost", 1,"localhost", "/solicitudes"));
-			Thread th2 = new Thread( new Worker("localhost", 2, "localhost", "/solicitudes"));
+			BasicConfigurator.configure();
+
+			Thread th1 = new Thread( new Worker(1,"localhost", "/solicitudes"));
+			Thread th2 = new Thread( new Worker(2, "localhost", "/solicitudes"));
 			
 			th1.start();
 			th2.start();

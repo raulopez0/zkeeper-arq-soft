@@ -92,7 +92,8 @@ public class Queue extends zkexamples.SyncPrimitive {
                //System.out.println("Temporary value: " + root + "/" + min);
                byte[] b = zk.getData(root + "/"+min,
                                      false, stat);
-               zk.delete(root + "/" + min, 0);
+               
+               zk.delete(root + "/" + min, -1);
                
                return b;
             }

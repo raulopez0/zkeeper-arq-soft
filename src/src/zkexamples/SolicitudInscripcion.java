@@ -13,11 +13,14 @@ public class SolicitudInscripcion implements Serializable {
 	public SolicitudInscripcion() {
 		
 	}
+	public SolicitudInscripcion(SolicitudInscripcion s) {
+		this.setPadron(s.getPadron());
+		this.setCodigoMateria(s.getCodigoMateria());
+	}
 	public SolicitudInscripcion( String padron, String codigo_materia) {
 		this.setPadron(padron);
 		this.setCodigoMateria(codigo_materia);
 	}
-	
 	public String getPadron() {
 		return padron;
 	}
