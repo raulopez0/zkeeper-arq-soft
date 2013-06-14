@@ -19,7 +19,7 @@ import org.apache.zookeeper.data.Stat;
 /**
  * Producer-Consumer queue
  */
-public class Queue extends zkexamples.SyncPrimitive {
+public class Service extends zkexamples.SyncPrimitive {
 
    /**
     * Constructor of producer-consumer queue
@@ -27,7 +27,7 @@ public class Queue extends zkexamples.SyncPrimitive {
     * @param address
     * @param name
     */
-   Queue(String address, String name) throws KeeperException, IOException {
+   Service(String address, String name) throws KeeperException, IOException {
       super(address);
       this.root = name;
       // Create ZK node name
@@ -103,7 +103,7 @@ public class Queue extends zkexamples.SyncPrimitive {
    public static void queueTest(String args[]) throws KeeperException, IOException {
 	  
 	   
-      Queue q = new Queue(args[1], "/solicitudes");
+      Service q = new Service(args[1], "/solicitudes");
 
       int i;
       Integer max = new Integer(args[2]);
@@ -138,7 +138,7 @@ public class Queue extends zkexamples.SyncPrimitive {
    
    public static void main(String args[]) {	   
       try {
-         Queue q = new Queue("localhost", "/monitor/q1");
+         queueTest(args);
       } catch(Exception ex) {
          ex.printStackTrace();
       }
